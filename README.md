@@ -8,7 +8,7 @@ Tailwind
 npm create vite@latest my-tailwind-css -- --template vanilla
 cd my-tailwind-css
 npm install
-npm install tailwindcss
+npm install tailwindcss @tailwindcss/vite
 ```
 
 ## 設定追加
