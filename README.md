@@ -1,6 +1,4 @@
-# tailwind
-
-Tailwind
+# Tailwind 入門
 
 ## プロジェクト作成
 
@@ -46,8 +44,13 @@ export default defineConfig({
     <title>Vite App</title>
     <link href="/src/style.css" rel="stylesheet" />
   </head>
-  <body>
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
+  <body class="bg-gray-100 text-center p-10">
+    <h1 class="text-3xl font-bold text-blue-600">こんにちは、Tailwind!</h1>
+    <button
+      class="mt-4 px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600"
+    >
+      ボタン
+    </button>
   </body>
 </html>
 ```
