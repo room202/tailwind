@@ -8,7 +8,7 @@ Tailwind
 npm create vite@latest my-tailwind-css -- --template vanilla
 cd my-tailwind-css
 npm install
-npm install tailwindcss @tailwindcss/vite
+npm install tailwindcss
 ```
 
 ## 設定追加
@@ -29,12 +29,6 @@ export default defineConfig({
 });
 ```
 
-ファイル : `src/main/js`
-
-```js
-import "./style.css";
-```
-
 ファイル : `src/style.css`
 
 ```css
@@ -50,10 +44,10 @@ import "./style.css";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+    <link href="/src/style.css" rel="stylesheet" />
   </head>
   <body>
     <h1 class="text-3xl font-bold underline">Hello world!</h1>
-    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
 ```
@@ -63,6 +57,7 @@ import "./style.css";
 - `public/vite.svg`
 - `src/counter.js`
 - `src/javascript.svg`
+- `src/main.js`
 
 ## プロジェクト実行
 
