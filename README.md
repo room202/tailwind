@@ -1,2 +1,71 @@
 # tailwind
+
 Tailwind
+
+## プロジェクト作成
+
+```bash
+npm create vite@latest my-tailwind-css -- --template vanilla
+cd my-tailwind-css
+npm install
+npm install tailwindcss @tailwindcss/vite
+```
+
+## 設定追加
+
+ファイル(新規作成) : `vite.config.js`
+
+```js
+import { defineConfig } from "vite";
+import tailwindcss from "@tailwindcss/vite"; // 追加
+
+export default defineConfig({
+  plugins: [
+    tailwindcss(), // 追加
+  ],
+  server: {
+    port: 3000, // ここでポート番号を指定
+  },
+});
+```
+
+ファイル : `src/main/js`
+
+```js
+import "./style.css";
+```
+
+ファイル : `src/style.css`
+
+```css
+@import "tailwindcss";
+```
+
+ファイル : `index.html`
+
+```html
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <h1 class="text-3xl font-bold underline">Hello world!</h1>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
+```
+
+## 不要なファイル削除
+
+- `public/vite.svg`
+- `src/counter.js`
+- `src/javascript.svg`
+
+## プロジェクト実行
+
+```bash
+npm run dev
+```
